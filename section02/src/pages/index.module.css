@@ -1,0 +1,8 @@
+/* 파일명을 index.module.css로 설정함으로서 CSS Module에 적용된다. */
+.h1 {
+  color: red;
+}
+
+.h2 {
+  color: blue;
+}
