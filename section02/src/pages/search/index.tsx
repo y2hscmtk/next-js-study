@@ -2,9 +2,7 @@ import { useRouter } from "next/router"; // 쿼리 파라미터를 통해 데이
 
 export default function Page() {
   const router = useRouter();
-
   console.log(router);
-
   // const q = router.query.q;
   const { q } = router.query; // 구조 분해 할당
 

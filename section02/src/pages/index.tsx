@@ -6,7 +6,7 @@
 import style from "./index.module.css"
 
 export default function Home() {
-  // 다른 페이지의 h1 css와 겹쳐지지 않는 이름으로 className이 설정된다.
+  // 다른 페이지의 h1 css와 겹쳐지지 않는 이름으로 className이 설정된다.dd
   return <>
     <h1 className={style.h1}>인덱스</h1>
     <h2 className={style.h2}>인덱스</h2>
