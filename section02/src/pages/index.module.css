@@ -1,8 +1,10 @@
 /* 파일명을 index.module.css로 설정함으로서 CSS Module에 적용된다. */
-.h1 {
-  color: red;
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 }
 
-.h2 {
-  color: blue;
+.container h3 {
+  margin-bottom: 0px;
 }

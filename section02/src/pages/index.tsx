@@ -6,13 +6,26 @@
 import SearchableLayout from "@/components/searchable-layout"
 import style from "./index.module.css"
 import { ReactNode } from "react"
+import books from '@/mock/books.json' // @ : 프로젝트 src폴더를 가리키는 경로(타입스크립트 문법)
+import BookItem from "@/components/book-item";
 
 export default function Home() {
-  // 다른 페이지의 h1 css와 겹쳐지지 않는 이름으로 className이 설정된다.dd
-  return <>
-    <h1 className={style.h1}>인덱스</h1>
-    <h2 className={style.h2}>인덱스</h2>
-  </>
+  return (
+    <div className={style.container}>
+      <section>
+        <h3>지금 추천하는 도서</h3>
+        {books.map((book)=>(
+            <BookItem key={book.id} {...book} />
+        ))}
+      </section>
+      <section>
+        <h3>등록된 모든 도서</h3>
+        {books.map((book)=>(
+            <BookItem key={book.id} {...book} />
+        ))}
+      </section>
+    </div>
+  );
 }
 
 // 페이지 역할을 수행할 별도의 컴포넌트를 불러와 레이아웃이 적용된 페이지를 리턴하는 함수
